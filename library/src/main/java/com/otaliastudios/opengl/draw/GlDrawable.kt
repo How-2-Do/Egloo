@@ -12,7 +12,7 @@ abstract class GlDrawable : GlViewportAware() {
      * The model matrix for this object. Defaults to the
      * identity matrix, but can be accessed and modified.
      */
-    val modelMatrix = Egloo.IDENTITY_MATRIX.clone()
+    var modelMatrix = Egloo.IDENTITY_MATRIX.clone()
 
     /**
      * Returns the array of vertices.
