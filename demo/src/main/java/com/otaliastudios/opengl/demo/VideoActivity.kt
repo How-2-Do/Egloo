@@ -7,7 +7,6 @@ import android.graphics.PointF
 import android.graphics.RectF
 import android.graphics.SurfaceTexture
 import android.net.Uri
-import android.opengl.GLES11Ext
 import android.opengl.GLES20
 import android.opengl.GLSurfaceView
 import androidx.appcompat.app.AppCompatActivity
@@ -79,7 +78,8 @@ class VideoActivity : AppCompatActivity(), GLSurfaceView.Renderer {
         val dataSourceFactory = DefaultDataSourceFactory(this,
                 Util.getUserAgent(this, "Egloo"))
         val videoSource = ProgressiveMediaSource.Factory(dataSourceFactory)
-                .createMediaSource(Uri.parse("https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"))
+                // .createMediaSource(Uri.parse("https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"))
+                .createMediaSource(Uri.parse("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"))
         player.prepare(videoSource)
         player.playWhenReady = true
 
